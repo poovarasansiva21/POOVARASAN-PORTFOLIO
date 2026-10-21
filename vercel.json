@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "api/index.py": {
+      "includeFiles": [
+        "index.html",
+        "404.html",
+        "assets/**",
+        "data/**"
+      ]
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ]
+}
