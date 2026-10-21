@@ -85,6 +85,8 @@ Browser tests start a real server and a real local SMTP server and mock only thi
 2. In GitHub: Settings > Pages > Source: GitHub Actions. Add the repository variable `PORTFOLIO_API_BASE=https://<your-api-host>`.
 3. Push to `main`. `deploy-pages.yml` runs the tests, then publishes. On Netlify/Cloudflare Pages use `_headers` (replace `YOUR-API-HOST`). On a GitHub Pages *project* site (`user.github.io/repo/`) the 404 page's `/` links need the repo path.
 
+**Vercel:** Import this repository with **Root Directory** set to `.` (the repository root), not `backend`. Keep the project preset as **Other**; `vercel.json` routes requests to the FastAPI function. Add optional API and SMTP settings in Vercel's Environment Variables, then redeploy.
+
 ## Security notes
 
 - The terminal only runs commands from a fixed `Map`; input is never evaluated, shelled out, or inserted as HTML. Feature modules build the DOM with `textContent` only (a test enforces this).

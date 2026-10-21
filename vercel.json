@@ -1,12 +1,7 @@
 {
   "functions": {
     "api/index.py": {
-      "includeFiles": [
-        "index.html",
-        "404.html",
-        "assets/**",
-        "data/**"
-      ]
+      "includeFiles": "{index.html,404.html,assets/**,data/**}"
     }
   },
   "rewrites": [
