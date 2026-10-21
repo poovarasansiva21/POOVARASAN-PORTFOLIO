@@ -1,0 +1,7 @@
+# Netlify / Cloudflare Pages security headers for static hosting.
+# If the API lives on another origin, add it to connect-src.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com https://YOUR-API-HOST; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
